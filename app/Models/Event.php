@@ -20,7 +20,8 @@ protected $primaryKey = 'id';
         "event_location_name",
         "event_meetup_url",
         "event_is_virtual",
-        "fk_venue_event"
+        "fk_venue_event",
+        "event_status"
     ];
 
     function venue()

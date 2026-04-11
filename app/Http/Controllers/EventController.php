@@ -51,4 +51,10 @@ class EventController extends Controller
         $event->delete();
         return response()->json(['message' => 'Event deleted successfully']);   
     }
+
+    public function indexActiveEvents(){
+        return Event::with('venue')->where('event_status', true)->
+        orWhere('event_name', 'like', '%a%')->
+        get();  
+    }
 }
