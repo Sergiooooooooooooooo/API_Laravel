@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
 
-     use HasFactory;
+    use HasFactory;
 
-protected $primaryKey = 'id';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
         "event_name",
@@ -22,6 +22,11 @@ protected $primaryKey = 'id';
         "event_is_virtual",
         "fk_venue_event",
         "event_status"
+    ];
+
+    protected $casts = [
+        'event_date' => 'datetime',
+        'event_is_virtual' => 'boolean',
     ];
 
     function venue()

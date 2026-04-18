@@ -138,7 +138,7 @@ const deleteVenue = () => {
                     <SecondaryButton @click="closeModal">Cancelar</SecondaryButton>
                     <DangerButton :class="{ 'opacity-25': deleteForm.processing }" :disabled="deleteForm.processing"
                         @click="deleteVenue">
-                        Delete
+                        Eliminar
                     </DangerButton>
                 </div>
             </div>
